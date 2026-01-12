@@ -8,7 +8,9 @@ export const Navbar: React.FC = () => {
   const links = [
     { label: 'Home', href: '#' },
     { label: 'About Us', href: '#about' },
+    { label: 'Our Team', href: '#team' },
     { label: 'Programs', href: '#programs' },
+    { label: 'Gallery', href: '#gallery' },
     { label: 'Impact', href: '#impact' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -31,23 +33,23 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {links.map((link) => (
               <a 
                 key={link.label}
                 href={link.href} 
-                className="text-stone-600 hover:text-brand-darkBlue font-medium text-sm uppercase tracking-wider transition-colors"
+                className="text-stone-600 hover:text-brand-darkBlue font-medium text-sm uppercase tracking-wider transition-colors whitespace-nowrap"
               >
                 {link.label}
               </a>
             ))}
-            <Button variant="donate" className="px-6 py-2 text-sm">
+            <Button variant="donate" className="px-6 py-2 text-sm ml-4">
               Donate
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-stone-600 hover:text-brand-darkBlue p-2"
@@ -60,13 +62,14 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#F9F5EB] border-b border-stone-200">
+        <div className="lg:hidden bg-[#F9F5EB] border-b border-stone-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-brand-darkBlue hover:bg-stone-100"
+                onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
