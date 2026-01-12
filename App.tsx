@@ -10,6 +10,7 @@ import { Testimonial } from './components/Testimonial';
 import { FAQ } from './components/FAQ';
 import { Donation } from './components/Donation';
 import { Footer } from './components/Footer';
+import { BackToTop } from './components/BackToTop';
 
 const App: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         <Donation />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
