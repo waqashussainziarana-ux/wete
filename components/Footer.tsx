@@ -28,8 +28,8 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif font-bold text-brand-darkBlue mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-stone-600">
               <li><a href="#" className="hover:text-brand-teal">Home</a></li>
-              <li><a href="#mission" className="hover:text-brand-teal">About Us</a></li>
-              <li><a href="#how-we-help" className="hover:text-brand-teal">Our Programs</a></li>
+              <li><a href="#about" className="hover:text-brand-teal">About Us</a></li>
+              <li><a href="#programs" className="hover:text-brand-teal">Programs</a></li>
               <li><a href="#impact" className="hover:text-brand-teal">Impact Stories</a></li>
               <li><a href="#contact" className="hover:text-brand-teal">Contact</a></li>
             </ul>

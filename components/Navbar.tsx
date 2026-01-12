@@ -7,8 +7,8 @@ export const Navbar: React.FC = () => {
 
   const links = [
     { label: 'Home', href: '#' },
-    { label: 'Our Mission', href: '#mission' },
-    { label: 'How We Help', href: '#how-we-help' },
+    { label: 'About Us', href: '#about' },
+    { label: 'Programs', href: '#programs' },
     { label: 'Impact', href: '#impact' },
     { label: 'Contact', href: '#contact' },
   ];
