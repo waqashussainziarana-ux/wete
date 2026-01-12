@@ -25,6 +25,10 @@ const TierCard: React.FC<{ amount: number; label: string; selected: boolean; onC
 export const Donation: React.FC = () => {
   const [selectedAmount, setSelectedAmount] = useState<number>(50);
 
+  const handleDonate = () => {
+    window.open("https://gofund.me/5233f0ce", "_blank");
+  };
+
   return (
     <section className="relative py-20 bg-brand-darkBlue overflow-hidden text-center text-white">
       {/* Watercolory background texture for the blue section */}
@@ -55,7 +59,10 @@ export const Donation: React.FC = () => {
         </div>
 
         <div className="flex flex-col items-center gap-6">
-          <Button className="w-full md:w-auto px-12 py-4 text-xl bg-brand-teal hover:bg-emerald-600 shadow-xl border border-teal-400/30">
+          <Button 
+            className="w-full md:w-auto px-12 py-4 text-xl bg-brand-teal hover:bg-emerald-600 shadow-xl border border-teal-400/30"
+            onClick={handleDonate}
+          >
             Donate Securely ${selectedAmount}
           </Button>
 

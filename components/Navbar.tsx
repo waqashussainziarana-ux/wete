@@ -16,6 +16,10 @@ export const Navbar: React.FC = () => {
     { label: 'Contact', href: '#contact' },
   ];
 
+  const handleDonate = () => {
+    window.open("https://gofund.me/5233f0ce", "_blank");
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-[#F9F5EB]/95 backdrop-blur-sm border-b border-stone-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +48,7 @@ export const Navbar: React.FC = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant="donate" className="px-6 py-2 text-sm ml-4">
+            <Button variant="donate" className="px-6 py-2 text-sm ml-4" onClick={handleDonate}>
               Donate
             </Button>
           </div>
@@ -76,7 +80,7 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
             <div className="pt-4 px-3">
-              <Button variant="donate" className="w-full">Donate</Button>
+              <Button variant="donate" className="w-full" onClick={handleDonate}>Donate</Button>
             </div>
           </div>
         </div>

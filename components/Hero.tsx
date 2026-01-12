@@ -2,6 +2,10 @@ import React from 'react';
 import { Button } from './Button';
 
 export const Hero: React.FC = () => {
+  const handleDonate = () => {
+    window.open("https://gofund.me/5233f0ce", "_blank");
+  };
+
   return (
     <section className="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
       {/* Background Texture Effect */}
@@ -22,7 +26,7 @@ export const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="primary" className="text-lg px-8 py-4">
+              <Button variant="primary" className="text-lg px-8 py-4" onClick={handleDonate}>
                 Donate Now
               </Button>
               <Button variant="secondary" className="text-lg px-8 py-4">
