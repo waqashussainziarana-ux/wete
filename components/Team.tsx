@@ -27,10 +27,10 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, image }) => (
 );
 
 export const Team: React.FC = () => {
-  // Faceless suit for male
+  // Faceless suit for male (Colorful style)
   const maleAvatar = "https://cdn-icons-png.flaticon.com/512/4042/4042356.png"; 
-  // Black silhouette with long hair for female
-  const femaleAvatar = "https://cdn-icons-png.flaticon.com/512/552/552721.png"; 
+  // Faceless suit for female (Colorful style matching male)
+  const femaleAvatar = "https://cdn-icons-png.flaticon.com/512/4042/4042422.png"; 
 
   const members = [
     {
