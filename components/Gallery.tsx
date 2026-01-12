@@ -30,9 +30,9 @@ export const Gallery: React.FC = () => {
             </h2>
             <p className="text-stone-600">Glimpses into the daily impact of our programs for Afghan girls.</p>
           </div>
-          <button className="text-brand-teal font-medium hover:text-brand-darkBlue transition-colors flex items-center gap-1">
-            View All Photos &rarr;
-          </button>
+          <a href="#contact" className="text-brand-teal font-medium hover:text-brand-darkBlue transition-colors flex items-center gap-1">
+            Contact &rarr;
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
