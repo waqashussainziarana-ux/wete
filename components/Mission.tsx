@@ -39,6 +39,18 @@ export const Mission: React.FC = () => {
                 <p className="text-sm text-stone-600 mt-1">To dismantle barriers to learning and create safe pathways for academic and personal growth.</p>
               </div>
             </div>
+
+            {/* Registration Status Section */}
+            <div className="mt-8 p-6 bg-white/60 border border-brand-teal/20 rounded-lg shadow-sm">
+                <h4 className="font-serif font-bold text-brand-darkBlue mb-2">Registration Status</h4>
+                <p className="text-stone-600 text-sm mb-4 leading-relaxed">
+                    WETE is a registered Non-Profit organization in Canada. Our mission is to increase literacy among women in Afghanistan. We believe that Afghan women can better address the poverty and violence that limit their lives if they first gain access to a broader world of ideas.
+                </p>
+                <div className="inline-block bg-brand-sand/50 px-4 py-2 rounded text-sm font-semibold text-brand-darkBlue border border-brand-accent/30">
+                    Registration Number: <span className="text-brand-teal ml-1">768964462RR0001</span>
+                </div>
+            </div>
+
           </div>
         </div>
       </div>

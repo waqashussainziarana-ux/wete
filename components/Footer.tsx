@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Mail, BookOpen } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, BookOpen, Phone, MapPin, Clock } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -38,12 +38,23 @@ export const Footer: React.FC = () => {
           {/* Contact */}
           <div>
              <h4 className="font-serif font-bold text-brand-darkBlue mb-4">Contact</h4>
-             <ul className="space-y-2 text-sm text-stone-600">
-               <li className="flex items-center gap-2">
-                 <Mail className="w-4 h-4 text-brand-teal" />
-                 <a href="mailto:info@wete.ca" className="hover:text-brand-darkBlue">info@wete.ca</a>
+             <ul className="space-y-3 text-sm text-stone-600">
+               <li className="flex items-start gap-2">
+                 <MapPin className="w-4 h-4 text-brand-teal mt-1 flex-shrink-0" />
+                 <span>1000 Finch Ave West, North York, Ontario, Canada, M3J 2C7</span>
                </li>
-               <li className="pl-6">Toronto, Canada</li>
+               <li className="flex items-center gap-2">
+                 <Phone className="w-4 h-4 text-brand-teal flex-shrink-0" />
+                 <a href="tel:+16475402575" className="hover:text-brand-darkBlue">+1 647 540 2575</a>
+               </li>
+               <li className="flex items-center gap-2">
+                 <Mail className="w-4 h-4 text-brand-teal flex-shrink-0" />
+                 <a href="mailto:relations@wete.ca" className="hover:text-brand-darkBlue">relations@wete.ca</a>
+               </li>
+               <li className="flex items-center gap-2">
+                 <Clock className="w-4 h-4 text-brand-teal flex-shrink-0" />
+                 <span>Office Time: 10AM - 5PM</span>
+               </li>
              </ul>
           </div>
 
