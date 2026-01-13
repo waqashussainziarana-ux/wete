@@ -73,14 +73,15 @@
 
         <!-- 4. Rolling Hills (Watercolor wash style) -->
         
-        <!-- Hill Layer 1: Furthest (Hazy) -->
-        <div class="absolute bottom-[25%] left-[-10%] w-[120%] h-[50%] bg-gradient-to-b from-[#E6DCC3] to-[#DBCDAF] opacity-70 rounded-[100%] blur-md transform rotate-[-2deg]"></div>
+        <!-- Hill Layer 1: Furthest (Hazy) - Adjusted bottom for mobile -->
+        <div class="absolute bottom-[20%] md:bottom-[25%] left-[-10%] w-[120%] h-[50%] bg-gradient-to-b from-[#E6DCC3] to-[#DBCDAF] opacity-70 rounded-[100%] blur-md transform rotate-[-2deg]"></div>
         
-        <!-- Hill Layer 2: Mid-distance (Base for Village) -->
-        <div class="absolute bottom-[12%] right-[-10%] w-[130%] h-[55%] bg-gradient-to-b from-[#DBCDAF] to-[#Cebf9d] opacity-90 rounded-[100%] blur-sm transform rotate-[1deg]"></div>
+        <!-- Hill Layer 2: Mid-distance (Base for Village) - Adjusted bottom for mobile -->
+        <div class="absolute bottom-[10%] md:bottom-[12%] right-[-10%] w-[130%] h-[55%] bg-gradient-to-b from-[#DBCDAF] to-[#Cebf9d] opacity-90 rounded-[100%] blur-sm transform rotate-[1deg]"></div>
 
         <!-- Village & Greenery Layer (Traditional Architecture) -->
-        <div class="absolute bottom-[30%] left-[8%] w-[600px] h-[200px] z-5 opacity-80 pointer-events-none transform scale-75 md:scale-90 origin-bottom-left mix-blend-multiply">
+        <!-- Responsive Positioning: Smaller and further left on mobile to avoid camel overlap -->
+        <div class="absolute bottom-[22%] left-[-25%] md:bottom-[30%] md:left-[8%] w-[600px] h-[200px] z-5 opacity-80 pointer-events-none transform scale-[0.4] sm:scale-60 md:scale-90 origin-bottom-left mix-blend-multiply transition-all duration-500">
            <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="treeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -124,17 +125,11 @@
         </div>
 
         <!-- Camel Layer -->
-        <!-- 
-            *** INSTRUCTIONS TO REPLACE CAMEL IMAGE ***
-            1. Comment out or delete the <svg> block below.
-            2. Uncomment the <img> tag below.
-            3. Change the 'src' attribute to point to your image file or URL.
-        -->
-        <div class="absolute bottom-[18%] right-[8%] w-52 h-52 z-10 pointer-events-none transform -scale-x-100 mix-blend-multiply opacity-90">
+        <!-- Responsive Positioning: Smaller on mobile, pushed to right edge -->
+        <div class="absolute bottom-[12%] right-[-5%] md:bottom-[18%] md:right-[8%] w-32 h-32 md:w-52 md:h-52 z-10 pointer-events-none transform -scale-x-100 mix-blend-multiply opacity-90 transition-all duration-500">
             
-            <!-- UNCOMMENT THE LINE BELOW TO USE YOUR OWN IMAGE -->
-            <img src="https://wete.ca/wp-content/uploads/2026/01/ChatGPT-Image-Jan-13-2026-05_06_45-PM.png" alt="Camel" class="w-full h-full object-contain" /> -->
-
+            <!-- User Image -->
+            <img src="https://wete.ca/wp-content/uploads/2026/01/ChatGPT-Image-Jan-13-2026-05_06_45-PM.png" alt="Camel" class="w-full h-full object-contain" />
            
         </div>
 
