@@ -9,11 +9,11 @@ interface TeamMemberProps {
 
 const TeamMember: React.FC<TeamMemberProps> = ({ name, role, bio, image }) => (
   <div className="group text-center flex flex-col items-center h-full">
-    <div className="relative mb-6 w-40 h-40 overflow-hidden rounded-full border-4 border-white shadow-lg bg-brand-sand/30">
+    <div className="relative mb-6 w-40 h-40 overflow-hidden rounded-full border-4 border-white/60 shadow-lg bg-brand-sand/30">
       <img 
         src={image} 
         alt={name} 
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 bg-white"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 bg-white/50"
       />
     </div>
     <h3 className="text-xl font-serif font-bold text-brand-darkBlue mb-1">{name}</h3>
@@ -66,7 +66,7 @@ export const Team: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="py-24 bg-[#F5F0E6]">
+    <section id="team" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-darkBlue mb-4">

@@ -3,7 +3,7 @@ import { Facebook, Twitter, Instagram, Mail, BookOpen, Phone, MapPin, Clock } fr
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#F9F5EB] border-t border-stone-200 pt-16 pb-8">
+    <footer id="contact" className="bg-[#F9F5EB]/90 backdrop-blur-sm border-t border-stone-200/50 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif font-bold text-brand-darkBlue mb-4">Stay Updated</h4>
             <p className="text-xs text-stone-500 mb-3">Join our newsletter to receive updates on our progress.</p>
             <div className="flex">
-              <input type="email" placeholder="Email address" className="bg-white border border-stone-300 px-3 py-2 text-sm w-full rounded-l-md focus:outline-none focus:border-brand-teal" />
+              <input type="email" placeholder="Email address" className="bg-white/80 border border-stone-300 px-3 py-2 text-sm w-full rounded-l-md focus:outline-none focus:border-brand-teal" />
               <button className="bg-brand-darkBlue text-white px-3 py-2 rounded-r-md text-sm hover:bg-slate-800">Join</button>
             </div>
            </div>

@@ -14,7 +14,7 @@ const TierCard: React.FC<{ amount: number; label: string; selected: boolean; onC
       cursor-pointer p-6 rounded-lg text-center transition-all duration-200 border-2
       ${selected 
         ? 'bg-brand-sand border-brand-darkBlue transform -translate-y-1 shadow-lg' 
-        : 'bg-white border-transparent hover:border-brand-accent shadow-sm'}
+        : 'bg-white/90 border-transparent hover:border-brand-accent shadow-sm'}
     `}
   >
     <div className="text-4xl font-serif font-bold text-brand-darkBlue mb-2">${amount}</div>
@@ -30,9 +30,9 @@ export const Donation: React.FC = () => {
   };
 
   return (
-    <section className="relative py-20 bg-brand-darkBlue overflow-hidden text-center text-white">
-      {/* Watercolory background texture for the blue section */}
-      <div className="absolute inset-0 opacity-20 mix-blend-soft-light bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+    <section className="relative py-20 bg-brand-darkBlue/95 backdrop-blur-sm overflow-hidden text-center text-white rounded-xl mx-4 lg:mx-8 my-8 shadow-2xl">
+      {/* Paper texture overlay for the card itself */}
+      <div className="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/cream-paper.png")` }}></div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12">Your Support Changes Lives</h2>
@@ -72,16 +72,12 @@ export const Donation: React.FC = () => {
           </div>
 
           <div className="flex items-center justify-center gap-6 mt-4 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-             {/* Simple visual representation of payment logos */}
              <div className="flex items-center gap-1 font-bold italic text-xl"><span className="text-white">Pay</span><span className="text-blue-300">Pal</span></div>
              <div className="flex items-center gap-1 font-bold text-xl text-white">stripe</div>
              <div className="flex items-center gap-1"><CreditCard className="w-6 h-6"/> <span className="font-mono">VISA</span></div>
           </div>
         </div>
       </div>
-      
-      {/* Bottom sand decoration */}
-      <div className="absolute bottom-0 w-full h-8 bg-[#F9F5EB] rounded-t-[50%] scale-x-110"></div>
     </section>
   );
 };

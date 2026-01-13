@@ -3,7 +3,7 @@ import { Laptop, GraduationCap, ShieldCheck, Globe2 } from 'lucide-react';
 import { FeatureProps } from '../types';
 
 const FeatureCard: React.FC<FeatureProps> = ({ icon: Icon, title, description, colorClass }) => (
-  <div className="flex flex-col items-center text-center p-6 group">
+  <div className="flex flex-col items-center text-center p-6 group rounded-xl bg-white/40 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 border border-white/50">
     <div className={`w-16 h-16 rounded-full ${colorClass} bg-opacity-20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
       <Icon className={`w-8 h-8 ${colorClass?.replace('bg-', 'text-')}`} />
     </div>
@@ -41,7 +41,7 @@ export const Features: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-white" id="programs">
+    <section className="py-20" id="programs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-darkBlue relative inline-block">
@@ -52,7 +52,7 @@ export const Features: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Dotted line connector for desktop */}
-          <div className="hidden lg:block absolute top-14 left-0 w-full h-0.5 border-t-2 border-dashed border-stone-200 -z-10" />
+          <div className="hidden lg:block absolute top-14 left-0 w-full h-0.5 border-t-2 border-dashed border-stone-300/50 -z-10" />
           
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />

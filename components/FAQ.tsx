@@ -66,7 +66,7 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-white">
+    <section id="faq" className="py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-darkBlue mb-4">
@@ -77,7 +77,7 @@ export const FAQ: React.FC = () => {
           </p>
         </div>
 
-        <div className="bg-brand-cream/30 rounded-2xl p-6 md:p-8 shadow-sm border border-stone-100">
+        <div className="bg-white/40 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-sm border border-stone-100">
           {faqs.map((faq, index) => (
             <FAQItemComponent 
               key={index} 

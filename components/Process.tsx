@@ -14,9 +14,9 @@ const StepCard: React.FC<StepProps> = ({ number, icon: Icon, title, description,
       </div>
     )}
     
-    <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-sand shadow-inner mb-6 relative">
+    <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-brand-sand shadow-md mb-6 relative z-10">
       <Icon className="w-10 h-10 text-brand-darkBlue" />
-      <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-accent text-white font-bold flex items-center justify-center shadow-md">
+      <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-accent text-white font-bold flex items-center justify-center shadow-md border border-white">
         {number}
       </span>
     </div>
@@ -55,7 +55,7 @@ export const Process: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-[#F5F0E6] border-y border-stone-200">
+    <section className="py-20 border-y border-stone-200/50 bg-brand-sand/30 backdrop-blur-[2px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-serif font-bold text-brand-darkBlue">

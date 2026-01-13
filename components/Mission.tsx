@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Mission: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-brand-cream relative overflow-hidden">
+    <section id="about" className="py-20 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative group">
@@ -41,7 +41,7 @@ export const Mission: React.FC = () => {
             </div>
 
             {/* Registration Status Section */}
-            <div className="mt-8 p-6 bg-white/60 border border-brand-teal/20 rounded-lg shadow-sm">
+            <div className="mt-8 p-6 bg-white/40 backdrop-blur-sm border border-brand-teal/20 rounded-lg shadow-sm">
                 <h4 className="font-serif font-bold text-brand-darkBlue mb-2">Registration Status</h4>
                 <p className="text-stone-600 text-sm mb-4 leading-relaxed">
                     WETE is a registered Non-Profit organization in Canada. Our mission is to increase literacy among women in Afghanistan. We believe that Afghan women can better address the poverty and violence that limit their lives if they first gain access to a broader world of ideas.

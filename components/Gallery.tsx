@@ -21,7 +21,7 @@ export const Gallery: React.FC = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-white">
+    <section id="gallery" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
           <div>
@@ -37,7 +37,7 @@ export const Gallery: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {images.map((img, index) => (
-            <div key={index} className="relative group overflow-hidden rounded-lg shadow-md aspect-video">
+            <div key={index} className="relative group overflow-hidden rounded-lg shadow-md aspect-video border-4 border-white/60">
               <img 
                 src={img.src} 
                 alt={img.caption}

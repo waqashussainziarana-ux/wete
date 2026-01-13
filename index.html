@@ -45,8 +45,55 @@
   }
 }
 </script>
+    <style>
+      /* Global styles */
+      body {
+        margin: 0;
+        padding: 0;
+        color: #1F2937;
+      }
+    </style>
 </head>
-  <body class="bg-[#F9F5EB] text-gray-800 antialiased">
+  <body class="antialiased relative min-h-screen">
+    
+    <!-- GLOBAL DESERT BACKGROUND START -->
+    <div id="global-bg" class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-[#FFFBF2]">
+        <!-- 1. Paper Texture Overlay (Global) -->
+        <div class="absolute inset-0 opacity-40 mix-blend-multiply z-50" 
+             style="background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');">
+        </div>
+
+        <!-- 2. Sky Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#FFFBF2] via-[#FDF6E3] to-[#F2E6D0]"></div>
+
+        <!-- 3. Desert Layers (Fixed positions to look like distant mountains) -->
+        
+        <!-- Furthest Layer (Hazy/Light) -->
+        <div class="absolute bottom-[-10%] left-[-20%] w-[140%] h-[50%] bg-[#E8DEC7] opacity-80 rounded-[100%] blur-xl transform rotate-[-2deg]"></div>
+        
+        <!-- Mid Layer 1 -->
+        <div class="absolute bottom-[-15%] right-[-10%] w-[120%] h-[45%] bg-[#E0D4B6] opacity-90 rounded-[100%] blur-lg transform rotate-[3deg] shadow-lg"></div>
+
+        <!-- Camel Silhouette Layer -->
+        <!-- Using inline SVG to ensure it is clearly a camel and not a dog -->
+        <div class="absolute bottom-[23%] right-[8%] w-16 h-16 z-10 opacity-40 mix-blend-multiply pointer-events-none">
+            <svg viewBox="0 0 512 512" fill="#8B4513" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dromedary Camel Path -->
+                <path d="M468.9 229.6c-4.2-10.7-14.7-17.7-26.2-17.6-14.4.2-26.7 9.8-31 23.6-2.5 7.9-2.3 16.4.5 24.2 1.6 4.3 3.9 8.3 6.8 11.9 2.3 2.8 2.6 6.9.5 9.9-1.9 2.7-5.5 3.9-8.6 2.8-6.1-2.1-12-5.1-17.6-8.7-27.4-17.9-46.7-47.5-51.5-79.6-1.5-9.8-1.5-19.9.2-29.6.5-2.6 1.1-5.2 1.9-7.7 2.4-7.5 7.1-13.9 13.5-18.4 4.5-3.2 9.5-5.6 14.8-7.1 9.4-2.7 19.5-1.5 28 3.5 12.3 7.2 16.5 22.8 9.3 35.1-4.7 8.1-13.2 13-22.3 13.5-6.6.4-13.1-2-18.3-6.4-3.5-3-5.5-7.4-5.5-12.1 0-3.1-2.5-5.6-5.6-5.6-3.1 0-5.6 2.5-5.6 5.6 0 9.2 3.9 17.8 10.7 23.7 8.5 7.3 19.5 11.1 30.6 10.5 14.9-.8 29.2-8.6 37.3-21.3 11.5-18 6.7-41.5-11-53.5-13.1-8.9-29.7-11.2-44.8-6.5-9.5 3-18.1 8.5-25 15.8-10.8 11.4-17.1 26.6-17.9 42.4-1.2 24.3 7 48.1 22.6 67.2 4.1 5 8.7 9.5 13.8 13.4 1 2.3.9 5.1-.4 7.2-2.3 3.6-7.1 4.7-10.8 2.6-19.2-11.2-34.9-28.7-44.5-48.7-2.9-6-5.3-12.3-7-18.7-5.3-19.2-3.1-39.7 6.1-57.9 2-3.8 3.3-8.1 3.5-12.6.2-4.5-1-9-3.4-12.9l-13.4-22.1c-6-9.8-16.5-15.8-28-15.8H219.8c-10 0-19.3 4.6-25.5 12.6l-20.9 27c-6.2 8-15.8 12.6-25.9 12.6h-34.8c-12.3 0-23.7-6.9-29.5-17.8L64.6 74.3c-2.9-5.4-8.5-8.7-14.6-8.7H22.4c-6.2 0-11.2 5-11.2 11.2v29.1c0 28 17.6 53 43.8 62.3l43 15.2c6.7 2.4 11.2 8.7 11.2 15.8v37.6c0 9.2 7.5 16.8 16.8 16.8h22.4c9.2 0 16.8-7.5 16.8-16.8V187.6c0-9.2-7.5-16.8-16.8-16.8h-7.6l10-12.9h30.8l20.8-26.9c1.9-2.5 4.8-3.9 7.9-3.9h54.9l8.6 14.2c-15.3 26.5-18.7 58.1-9.5 87.5 2.1 6.8 4.9 13.4 8.3 19.7 13.5 24.8 36.3 43.1 63.3 50.8 6.4 1.8 12.9 3 19.5 3.5 3.1.2 6.1-2.2 6.3-5.3.3-3.1-2-5.9-5.1-6.2-31.5-2.7-59.5-20.5-75.1-47.8-3-5.3-5.5-10.9-7.3-16.6-8.8-27.7-4.4-57.7 11.7-81.8 1.4 2 3.1 3.9 5.1 5.5 3.5 2.7 7.9 4.2 12.3 4.2 11.5 0 20.8-9.3 20.8-20.8 0-4.5-1.5-8.9-4.2-12.4zm-192 11.2h-11.2c-3.1 0-5.6-2.5-5.6-5.6s2.5-5.6 5.6-5.6h11.2c3.1 0 5.6 2.5 5.6 5.6s-2.5 5.6-5.6 5.6z"/>
+            </svg>
+        </div>
+
+        <!-- Mid Layer 2 (More definition) -->
+        <div class="absolute bottom-[-20%] left-[-10%] w-[130%] h-[40%] bg-[#DCCFB2] rounded-[100%] transform rotate-[-1deg] shadow-xl"></div>
+
+        <!-- Foreground Hint (Closest) -->
+        <div class="absolute bottom-[-25%] right-[-20%] w-[150%] h-[35%] bg-[#D4C5A0] rounded-[100%] transform rotate-[2deg] shadow-2xl mix-blend-multiply opacity-60"></div>
+        
+        <!-- Warm Overlay to unify colors (Sepia tint) -->
+        <div class="absolute inset-0 bg-amber-100/20 mix-blend-color pointer-events-none"></div>
+    </div>
+    <!-- GLOBAL DESERT BACKGROUND END -->
+
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

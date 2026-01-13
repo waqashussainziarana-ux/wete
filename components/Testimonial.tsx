@@ -3,12 +3,10 @@ import { Quote } from 'lucide-react';
 
 export const Testimonial: React.FC = () => {
   return (
-    <section className="py-24 bg-[#F9F5EB] relative overflow-hidden" id="impact">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-         <div className="absolute top-10 left-10 w-64 h-64 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
-         <div className="absolute bottom-10 right-10 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
-      </div>
+    <section className="py-24 relative overflow-hidden" id="impact">
+      {/* 
+         Removed local blob decorations to allow global desert background to show.
+      */}
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="flex justify-center mb-8">
@@ -30,9 +28,6 @@ export const Testimonial: React.FC = () => {
           *All stories are shared anonymously to protect safety.
         </p>
       </div>
-      
-      {/* Landscape decoration at bottom to transition to footer/donation area */}
-      <div className="absolute bottom-0 w-full h-16 md:h-24 bg-gradient-to-t from-brand-darkBlue/10 to-transparent"></div>
     </section>
   );
 };
