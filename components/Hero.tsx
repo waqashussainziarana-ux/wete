@@ -11,59 +11,63 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
-      {/* Background Texture Effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#F9F5EB] via-[#F5F0E6] to-[#F9F5EB] -z-10" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="relative pt-12 pb-32 lg:pt-24 lg:pb-48 overflow-hidden bg-[#F9F5EB]">
+      {/* Texture Overlay */}
+      <div className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none" style={{ backgroundImage: `url("https://www.transparenttextures.com/patterns/cream-paper.png")` }}></div>
+
+      {/* Background Hills/Dunes Layer */}
+      <div className="absolute inset-x-0 bottom-0 w-full h-full pointer-events-none z-0">
+         {/* Distant Hill */}
+         <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-[#F0EAD6] rounded-tl-[50%] rounded-tr-[30%] transform scale-125 translate-y-20 opacity-80"></div>
+         {/* Mid Hill */}
+         <div className="absolute bottom-0 right-0 w-[80%] h-[40%] bg-[#E6DCC3] rounded-tl-[80%] transform translate-y-12"></div>
+         {/* Front Hill Left */}
+         <div className="absolute -bottom-10 left-0 w-[60%] h-[30%] bg-[#DCCFB2] rounded-tr-[100%]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           
           {/* Text Content */}
-          <div className="space-y-8 text-center lg:text-left z-10">
-            <h1 className="font-serif text-4xl lg:text-6xl font-bold text-brand-darkBlue leading-tight">
+          <div className="space-y-6 text-center lg:text-left">
+            <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-brand-darkBlue leading-[1.15]">
               Education Is Her Right — <br />
-              <span className="text-brand-teal/90 italic">Even When It Is Denied</span>
+              <span className="text-brand-darkBlue">Even When It Is Denied</span>
             </h1>
             
-            <p className="text-lg lg:text-xl text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              WETE supports safe, discreet, and resilient education programs for women and girls in Afghanistan who have been barred from learning.
+            <p className="text-lg lg:text-xl text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium">
+              Supporting safe, discreet education programs for women and girls in Afghanistan.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="primary" className="text-lg px-8 py-4" onClick={handleDonate}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+              <Button variant="primary" className="text-lg px-8 py-3 shadow-lg" onClick={handleDonate}>
                 Donate Now
               </Button>
-              <Button variant="secondary" className="text-lg px-8 py-4" onClick={handleLearnMore}>
+              <Button variant="secondary" className="text-lg px-8 py-3 shadow-lg" onClick={handleLearnMore}>
                 Learn How We Help
               </Button>
             </div>
           </div>
 
           {/* Illustration / Image Area */}
-          <div className="relative flex justify-center lg:justify-end">
-             {/* Decorative blob behind image */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-            <div className="absolute -bottom-8 -left-20 w-72 h-72 bg-teal-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-            
-            <div className="relative max-w-md w-full rounded-2xl overflow-hidden shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-500">
-               {/* Replaced with the famous 'Afghan Girl' portrait */}
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/en/b/b4/Sharbat_Gula.jpg" 
-                alt="Afghan Girl - Sharbat Gula" 
-                className="w-full h-auto object-cover contrast-110 brightness-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-tr from-brand-darkBlue/10 to-transparent mix-blend-overlay"></div>
+          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+            {/* 
+                Placeholder image chosen to resemble the theme of the design. 
+            */}
+            <div className="relative w-full max-w-lg">
+                <img 
+                  src="https://wete.ca/wp-content/uploads/2026/01/ChatGPT-Image-Jan-13-2026-04_15_33-PM.png" 
+                  alt="Afghan women reading illustration" 
+                  className="w-full h-auto object-contain drop-shadow-2xl rounded-xl mask-image-gradient"
+                  style={{ maskImage: 'linear-gradient(to bottom, black 85%, transparent 100%)' }}
+                />
             </div>
           </div>
         </div>
       </div>
       
-      {/* Curved Divider at Bottom */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[60px] text-white/50">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-[#F9F5EB]"></path>
-        </svg>
-      </div>
+      {/* Smooth Transition to next section */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 };
